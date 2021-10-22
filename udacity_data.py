@@ -9,8 +9,6 @@ soup = bs(url.content, 'html.parser')
 
 
 data = soup.find('div', class_='upcoming-programs-list_layout__28HUd')
-print(len(data))
-
 u_list = data.find('ul')
 
 main_di = {}
