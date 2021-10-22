@@ -15,7 +15,6 @@ u_list = data.find('ul')
 
 main_di = {}
 i = 0
-# import pdb; pdb.set_trace()
 for item in u_list.children:
     di = {}
     di['start_date'] =item.find_all('div')[0].find('time').get_text()
@@ -26,4 +25,3 @@ for item in u_list.children:
 
 with open('course_data.json', 'w') as fp:
     json.dump(main_di, fp, indent=4)
-# data.find('ul').contents[0].find_all('div')[1].find('p').get_text()
